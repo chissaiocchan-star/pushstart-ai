@@ -44,7 +44,16 @@ details{border-bottom:1px solid var(--line);padding:10px 0} details:last-child{b
 summary{cursor:pointer;font-weight:600}
 a{color:var(--accent)}
 .buy a{color:var(--btntext)}
-html[data-lang=ja] .en,html[data-lang=en] .ja{display:none}
+/*I18N-CSS*/
+section.lg,section.ja,section.en{display:none}
+html[data-lang="ja"] section.ja{display:block}
+html[data-lang="en"] section.en{display:block}
+html[data-lang="ar"] section.ar{display:block}
+html[data-lang="zh-TW"] section.zh-TW{display:block}
+html[data-lang="zh-CN"] section.zh-CN{display:block}
+html[data-lang="ko"] section.ko{display:block}
+html[data-lang="es"] section.es{display:block}
+/*/I18N-CSS*/
 footer{margin-top:3em}
 </style>
 </head>
@@ -52,7 +61,7 @@ footer{margin-top:3em}
 <main>
 <div class="top">
   <img src="icon.png" alt="PushStart Lab">
-  <div class="lang"><button id="lang-btn" type="button">English / 日本語</button></div>
+  <div class="lang"><select id="lang-sel" aria-label="Language" style="background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:20px;padding:6px 10px;font:inherit"><option value="ja">日本語</option><option value="en">English</option><option value="ar">العربية</option><option value="zh-TW">繁體中文</option><option value="zh-CN">简体中文</option><option value="ko">한국어</option><option value="es">Español</option></select></div>
 </div>
 
 <!-- ===== 日本語 ===== -->
@@ -241,6 +250,218 @@ footer{margin-top:3em}
 </div>
 </section>
 
+<!--I18N-->
+<section class="lg ar" lang="ar" dir="rtl">
+<h1>حوّل Claude Code إلى مساعدك الذكي الخاص</h1>
+<p>PushStart AI حزمة بداية لـ Claude Code. ضع لقطات شاشة ومقاطع فيديو من عملك اليومي، وسينشئ لك أوامر ولوحة تحكم تناسب روتينك. بلا برمجة وبلا دليل طويل.</p>
+<p><b>من تثبيت Claude Code إلى إعداد يناسب روتينك: نقرتان وبضع خطوات. (يلزم اشتراك Claude مدفوع بشكل منفصل.)</b></p>
+<video controls playsinline preload="metadata" poster="og.png" src="promo_en.mp4"></video>
+<p class="muted">الفيديو بالإنجليزية.</p>
+<div class="buy">
+<a href="https://pushstartlab.gumroad.com/l/pushstart-ai">اشترِ عبر Gumroad<small>$39</small></a>
+<a href="https://pushstart-lab.booth.pm/items/8997091">BOOTH (متجر اليابان)<small>JPY 4,980 شامل الضريبة</small></a>
+<a href="https://note.com/pushstartlab/n/nbcc305fa2bcf">note (متجر اليابان)<small>JPY 4,980 شامل الضريبة</small></a>
+</div>
+<p class="muted">* يلزم اشتراك Claude مدفوع (Pro/Max) أو حساب Anthropic API بشكل منفصل. يُرجى قراءة الملاحظات أدناه قبل الشراء.</p>
+<h2>ثلاث خطوات</h2>
+<ol class="steps"><li>انقر مرتين على ملف الإعداد (Windows / Mac)</li><li>ضع لقطات شاشة (ومقاطع فيديو) من عملك اليومي في المجلد الذي يُفتح</li><li>سمِّ مساعدك. سيقرأ روتينك وينشئ أوامرك ولوحة التحكم الخاصة بك</li></ol>
+<h2>ماذا ستحصل عليه</h2>
+<ul><li>إعداد بنقرة واحدة لنظامي Windows وMac (يثبّت Claude Code والأدوات اللازمة بالمثبّتات الرسمية)</li><li>أوامر أساسية جاهزة من اليوم الأول (مثل /morning للملخص الصباحي)، إضافةً إلى مهامك الخاصة المبنية على روتينك الفعلي</li><li>لوحة تحكم شخصية</li><li>تُرسل الفيديوهات والملفات الكبيرة إلى Google Gemini (توجد باقة مجانية) لتوفير استهلاك Claude</li><li>اختر وضع التوفير أو العادي أو القوة</li><li>نص مساعدة ذاتية: الصقه في Claude ليرشدك خطوة بخطوة عند أي مشكلة</li></ul>
+<img src="dashboard.png" alt="Dashboard" loading="lazy">
+<h2>ماذا يتغيّر عند إضافة PushStart AI؟</h2>
+<ul><li><b>الإعداد بنقرتين:</b> يثبّت Claude Code والأدوات التي يحتاجها نيابةً عنك.</li><li><b>أوامر جاهزة:</b> /morning و/analyze و/research وغيرها، وتتذكر اسمك وروتينك.</li><li><b>سمِّ مساعدك:</b> يتعلّم طريقة عملك ويخاطبك وفقًا لها.</li><li><b>مستويات تفكير قابلة للتبديل لتوفير الاستهلاك:</b> رخيص للأسئلة البسيطة وأقوى للصعبة.</li></ul>
+<p class="muted">* أمثلة فقط. المهام المبنية من لقطات شاشتك تعتمد على ما تعرضه شاشتك، وقد تختلف النتائج.</p>
+<h2>لمن هذا المنتج؟</h2>
+<div class="box"><p>لمن لا يرتاح لملفات الإعداد والأوامر ويريد البدء بنقرتين. ليس مناسبًا لك إن كنت تفضّل تجميع كل شيء بنفسك.</p></div>
+<h2>اقرأ قبل الشراء</h2>
+<p class="muted">الشروط الكاملة (الاسترداد، الدول المدعومة، الأسعار) أدناه بالإنجليزية، وهي النص المعتمد. هذه الترجمة للمساعدة فقط.</p>
+<div lang="en" dir="ltr"><h2>Please read before buying</h2>
+<div class="box"><ul>
+<li><b>A paid Claude plan (Pro or Max) or an Anthropic API account is required.</b> It is not included. (Guide: Pro is $20/month, or $17/month billed annually, before tax, as listed on Anthropic's site in October 2026. Prices may change; please check Anthropic's official page.) To upgrade: log in at claude.ai, open https://claude.ai/upgrade and choose Pro (on mobile, prices are shown in your app store).</li>
+<li>Claude is available only in Anthropic's <a href="https://www.anthropic.com/supported-countries">supported countries and regions</a>, for users 18+.</li>
+<li>Windows 10/11 or macOS, and an internet connection.</li>
+<li>First run needs a Claude login. On Mac, the official Node.js installer may open.</li>
+<li>Scripts are not code-signed, so Windows/Mac show a one-time security warning.</li>
+<li>On Gemini's free tier, Google may use submitted content to improve its products. In the EEA, Switzerland and the UK, a paid key is recommended.</li>
+<li>Digital content is generally non-refundable once downloaded. If your PC meets the requirements and it still doesn't work, or where the law requires it, please contact us.</li>
+</ul></div>
+<p class="muted">Prices are fixed per store, set to match each platform's specifications, exchange rates and local tax rules. We cannot accept individual discount or currency-change requests.</p></div>
+<h2>أسئلة شائعة</h2>
+<div class="box">
+<details><summary>هل أحتاج إلى معرفة البرمجة؟</summary><p>لا. لكن تلزم بضع نقرات عند أول تسجيل دخول وعند تحذير الأمان لمرة واحدة؛ الدليل يشرح كل خطوة.</p></details>
+<details><summary>هل الاشتراك في Claude مشمول؟</summary><p>لا. يلزم اشتراك Claude مدفوع (Pro/Max) أو حساب Anthropic API بشكل منفصل.</p></details>
+<details><summary>هل يعمل على Mac وWindows؟</summary><p>نعم، كلاهما.</p></details>
+</div>
+</section>
+<section class="lg zh-TW" lang="zh-TW" dir="ltr">
+<h1>把 Claude Code 變成你專屬的 AI 助理</h1>
+<p>PushStart AI 是 Claude Code 的入門套件。把你日常工作的螢幕截圖和影片放進去，它會依你的作息建立專屬指令和儀表板。不需寫程式，也沒有厚厚的說明書。</p>
+<p><b>從安裝 Claude Code 到依你的作息完成設定：雙擊一下，再跑幾個步驟。（需另外訂閱付費的 Claude 方案。）</b></p>
+<video controls playsinline preload="metadata" poster="og.png" src="promo_en.mp4"></video>
+<p class="muted">影片為英文。</p>
+<div class="buy">
+<a href="https://pushstartlab.gumroad.com/l/pushstart-ai">在 Gumroad 購買<small>$39</small></a>
+<a href="https://pushstart-lab.booth.pm/items/8997091">BOOTH（日本商店）<small>JPY 4,980 含稅</small></a>
+<a href="https://note.com/pushstartlab/n/nbcc305fa2bcf">note（日本商店）<small>JPY 4,980 含稅</small></a>
+</div>
+<p class="muted">※ 需另外訂閱付費的 Claude 方案（Pro/Max）或擁有 Anthropic API 帳號。購買前請先閱讀下方說明。</p>
+<h2>三個步驟</h2>
+<ol class="steps"><li>雙擊安裝檔（Windows / Mac）</li><li>把日常工作的螢幕截圖（和影片）放進開啟的資料夾</li><li>為你的助理取個名字。它會讀取你的作息，建立專屬指令和儀表板</li></ol>
+<h2>內容</h2>
+<ul><li>Windows 與 Mac 一鍵安裝（用官方安裝程式安裝 Claude Code 與必要工具）</li><li>第一天就有基本指令（例如 /morning 早晨摘要），另有依你實際作息建立的專屬任務</li><li>個人儀表板</li><li>影片與大型檔案交給 Google Gemini（有免費額度），節省 Claude 用量</li><li>可選擇省錢、標準、強力三種模式</li><li>自助支援提示詞：貼到 Claude，它會一步步帶你解決問題</li></ul>
+<img src="dashboard.png" alt="Dashboard" loading="lazy">
+<h2>加入 PushStart AI 後有什麼不同？</h2>
+<ul><li><b>雙擊完成安裝：</b>自動幫你裝好 Claude Code 與所需工具。</li><li><b>第一天就有現成指令：</b>/morning、/analyze、/research 等，並記得你的名字與作息。</li><li><b>為助理取名：</b>它會學習你的工作方式並據此與你對話。</li><li><b>可切換思考等級以節省用量：</b>簡單問題用省錢模式，困難問題用更強的模式。</li></ul>
+<p class="muted">※ 僅為範例。依螢幕截圖與影片建立的專屬任務取決於你畫面上的內容，結果會有所不同。</p>
+<h2>適合誰</h2>
+<div class="box"><p>不習慣設定檔與指令、想用雙擊開始的人。如果你喜歡自己研究組裝，就不適合。</p></div>
+<h2>購買前請閱讀</h2>
+<p class="muted">完整條款（退款、支援地區、價格）以下方英文為準。本翻譯僅供參考。</p>
+<div lang="en" dir="ltr"><h2>Please read before buying</h2>
+<div class="box"><ul>
+<li><b>A paid Claude plan (Pro or Max) or an Anthropic API account is required.</b> It is not included. (Guide: Pro is $20/month, or $17/month billed annually, before tax, as listed on Anthropic's site in October 2026. Prices may change; please check Anthropic's official page.) To upgrade: log in at claude.ai, open https://claude.ai/upgrade and choose Pro (on mobile, prices are shown in your app store).</li>
+<li>Claude is available only in Anthropic's <a href="https://www.anthropic.com/supported-countries">supported countries and regions</a>, for users 18+.</li>
+<li>Windows 10/11 or macOS, and an internet connection.</li>
+<li>First run needs a Claude login. On Mac, the official Node.js installer may open.</li>
+<li>Scripts are not code-signed, so Windows/Mac show a one-time security warning.</li>
+<li>On Gemini's free tier, Google may use submitted content to improve its products. In the EEA, Switzerland and the UK, a paid key is recommended.</li>
+<li>Digital content is generally non-refundable once downloaded. If your PC meets the requirements and it still doesn't work, or where the law requires it, please contact us.</li>
+</ul></div>
+<p class="muted">Prices are fixed per store, set to match each platform's specifications, exchange rates and local tax rules. We cannot accept individual discount or currency-change requests.</p></div>
+<h2>常見問題</h2>
+<div class="box">
+<details><summary>需要會寫程式嗎？</summary><p>不需要。第一次登入與一次性的安全警告需要點幾下，說明文件會逐步指引。</p></details>
+<details><summary>包含 Claude 訂閱嗎？</summary><p>不包含。需另外訂閱付費的 Claude 方案（Pro/Max）或擁有 Anthropic API 帳號。</p></details>
+<details><summary>Mac 和 Windows 都能用嗎？</summary><p>都可以。</p></details>
+</div>
+</section>
+<section class="lg zh-CN" lang="zh-CN" dir="ltr">
+<h1>把 Claude Code 变成你专属的 AI 助手</h1>
+<p>PushStart AI 是 Claude Code 的入门套件。把你日常工作的屏幕截图和视频放进去，它会根据你的作息生成专属指令和仪表板。无需编程，也没有冗长的说明书。</p>
+<p><b>从安装 Claude Code 到按你的作息完成设置：双击一下，再走几个步骤。（需另外订阅付费的 Claude 套餐。）</b></p>
+<video controls playsinline preload="metadata" poster="og.png" src="promo_en.mp4"></video>
+<p class="muted">视频为英文。</p>
+<div class="buy">
+<a href="https://pushstartlab.gumroad.com/l/pushstart-ai">在 Gumroad 购买<small>$39</small></a>
+<a href="https://pushstart-lab.booth.pm/items/8997091">BOOTH（日本商店）<small>JPY 4,980 含税</small></a>
+<a href="https://note.com/pushstartlab/n/nbcc305fa2bcf">note（日本商店）<small>JPY 4,980 含税</small></a>
+</div>
+<p class="muted">※ 需另外订阅付费的 Claude 套餐（Pro/Max）或拥有 Anthropic API 账号。购买前请先阅读下方说明。</p>
+<h2>三个步骤</h2>
+<ol class="steps"><li>双击安装文件（Windows / Mac）</li><li>把日常工作的屏幕截图（和视频）放进打开的文件夹</li><li>给你的助手起个名字。它会读取你的作息，生成专属指令和仪表板</li></ol>
+<h2>内容</h2>
+<ul><li>Windows 与 Mac 一键安装（用官方安装程序安装 Claude Code 及必要工具）</li><li>第一天就有基本指令（如 /morning 早间摘要），另有按你实际作息生成的专属任务</li><li>个人仪表板</li><li>视频和大文件交给 Google Gemini（有免费额度），节省 Claude 用量</li><li>可选择省钱、标准、强力三种模式</li><li>自助支持提示词：粘贴到 Claude，它会一步步带你解决问题</li></ul>
+<img src="dashboard.png" alt="Dashboard" loading="lazy">
+<h2>加入 PushStart AI 后有什么不同？</h2>
+<ul><li><b>双击完成安装：</b>自动帮你装好 Claude Code 及所需工具。</li><li><b>第一天就有现成指令：</b>/morning、/analyze、/research 等，并记住你的名字和作息。</li><li><b>给助手起名：</b>它会学习你的工作方式并据此与你对话。</li><li><b>可切换思考等级以节省用量：</b>简单问题用省钱模式，难题用更强的模式。</li></ul>
+<p class="muted">※ 仅为示例。根据屏幕截图和视频生成的专属任务取决于你屏幕上的内容，结果会有所不同。</p>
+<h2>适合谁</h2>
+<div class="box"><p>不习惯配置文件和命令、想用双击开始的人。如果你喜欢自己研究组装，就不适合。</p></div>
+<h2>购买前请阅读</h2>
+<p class="muted">完整条款（退款、支持地区、价格）以下方英文为准。本翻译仅供参考。</p>
+<div lang="en" dir="ltr"><h2>Please read before buying</h2>
+<div class="box"><ul>
+<li><b>A paid Claude plan (Pro or Max) or an Anthropic API account is required.</b> It is not included. (Guide: Pro is $20/month, or $17/month billed annually, before tax, as listed on Anthropic's site in October 2026. Prices may change; please check Anthropic's official page.) To upgrade: log in at claude.ai, open https://claude.ai/upgrade and choose Pro (on mobile, prices are shown in your app store).</li>
+<li>Claude is available only in Anthropic's <a href="https://www.anthropic.com/supported-countries">supported countries and regions</a>, for users 18+.</li>
+<li>Windows 10/11 or macOS, and an internet connection.</li>
+<li>First run needs a Claude login. On Mac, the official Node.js installer may open.</li>
+<li>Scripts are not code-signed, so Windows/Mac show a one-time security warning.</li>
+<li>On Gemini's free tier, Google may use submitted content to improve its products. In the EEA, Switzerland and the UK, a paid key is recommended.</li>
+<li>Digital content is generally non-refundable once downloaded. If your PC meets the requirements and it still doesn't work, or where the law requires it, please contact us.</li>
+</ul></div>
+<p class="muted">Prices are fixed per store, set to match each platform's specifications, exchange rates and local tax rules. We cannot accept individual discount or currency-change requests.</p></div>
+<h2>常见问题</h2>
+<div class="box">
+<details><summary>需要会编程吗？</summary><p>不需要。第一次登录和一次性的安全警告需要点几下，说明文档会逐步指引。</p></details>
+<details><summary>包含 Claude 订阅吗？</summary><p>不包含。需另外订阅付费的 Claude 套餐（Pro/Max）或拥有 Anthropic API 账号。</p></details>
+<details><summary>Mac 和 Windows 都能用吗？</summary><p>都可以。</p></details>
+</div>
+</section>
+<section class="lg ko" lang="ko" dir="ltr">
+<h1>Claude Code를 나만의 AI 비서로</h1>
+<p>PushStart AI는 Claude Code용 스타터 팩입니다. 일상 업무 화면의 스크린샷과 영상을 넣으면, 내 루틴에 맞는 전용 명령어와 대시보드를 만들어 줍니다. 코딩도, 두꺼운 매뉴얼도 필요 없습니다.</p>
+<p><b>Claude Code 설치부터 내 루틴에 맞춘 설정까지: 더블클릭 한 번과 몇 단계면 됩니다. (유료 Claude 요금제는 별도로 필요합니다.)</b></p>
+<video controls playsinline preload="metadata" poster="og.png" src="promo_en.mp4"></video>
+<p class="muted">영상은 영어입니다.</p>
+<div class="buy">
+<a href="https://pushstartlab.gumroad.com/l/pushstart-ai">Gumroad에서 구매<small>$39</small></a>
+<a href="https://pushstart-lab.booth.pm/items/8997091">BOOTH (일본 스토어)<small>JPY 4,980 세금 포함</small></a>
+<a href="https://note.com/pushstartlab/n/nbcc305fa2bcf">note (일본 스토어)<small>JPY 4,980 세금 포함</small></a>
+</div>
+<p class="muted">※ 유료 Claude 요금제(Pro/Max) 또는 Anthropic API 계정이 별도로 필요합니다. 구매 전에 아래 안내를 꼭 읽어 주세요.</p>
+<h2>세 단계</h2>
+<ol class="steps"><li>설치 파일을 더블클릭 (Windows / Mac)</li><li>열린 폴더에 일상 업무의 스크린샷(과 영상)을 넣기</li><li>비서에게 이름을 붙이기. 내 루틴을 읽고 전용 명령어와 대시보드를 만들어 줍니다</li></ol>
+<h2>구성</h2>
+<ul><li>Windows·Mac 원클릭 설치 (공식 설치 프로그램으로 Claude Code와 필요한 도구 설치)</li><li>첫날부터 쓸 수 있는 기본 명령어(/morning 아침 요약 등)와 실제 루틴으로 만든 나만의 작업</li><li>개인 대시보드</li><li>영상과 큰 파일은 Google Gemini(무료 한도 있음)로 보내 Claude 사용량 절약</li><li>절약·표준·파워 모드 선택</li><li>셀프 지원 프롬프트: Claude에 붙여 넣으면 문제를 단계별로 안내</li></ul>
+<img src="dashboard.png" alt="Dashboard" loading="lazy">
+<h2>PushStart AI를 넣으면 무엇이 달라지나요?</h2>
+<ul><li><b>더블클릭으로 설치 끝:</b> Claude Code와 필요한 도구를 대신 설치합니다.</li><li><b>첫날부터 쓸 수 있는 명령어:</b> /morning, /analyze, /research 등. 이름과 루틴을 기억합니다.</li><li><b>비서에게 이름 붙이기:</b> 내 업무 방식을 익혀 그에 맞게 말합니다.</li><li><b>사용량을 아끼는 사고 수준 전환:</b> 간단한 질문은 저렴하게, 어려운 질문은 더 강하게.</li></ul>
+<p class="muted">※ 예시일 뿐입니다. 스크린샷과 영상으로 만들어지는 전용 작업은 화면 내용에 따라 달라지며 결과는 다를 수 있습니다.</p>
+<h2>이런 분께</h2>
+<div class="box"><p>설정 파일과 명령어가 익숙하지 않아 더블클릭으로 시작하고 싶은 분. 직접 조립하는 것이 즐거운 분에게는 맞지 않습니다.</p></div>
+<h2>구매 전 꼭 읽어 주세요</h2>
+<p class="muted">전체 약관(환불, 지원 국가, 가격)은 아래 영어 원문이 기준입니다. 이 번역은 참고용입니다.</p>
+<div lang="en" dir="ltr"><h2>Please read before buying</h2>
+<div class="box"><ul>
+<li><b>A paid Claude plan (Pro or Max) or an Anthropic API account is required.</b> It is not included. (Guide: Pro is $20/month, or $17/month billed annually, before tax, as listed on Anthropic's site in October 2026. Prices may change; please check Anthropic's official page.) To upgrade: log in at claude.ai, open https://claude.ai/upgrade and choose Pro (on mobile, prices are shown in your app store).</li>
+<li>Claude is available only in Anthropic's <a href="https://www.anthropic.com/supported-countries">supported countries and regions</a>, for users 18+.</li>
+<li>Windows 10/11 or macOS, and an internet connection.</li>
+<li>First run needs a Claude login. On Mac, the official Node.js installer may open.</li>
+<li>Scripts are not code-signed, so Windows/Mac show a one-time security warning.</li>
+<li>On Gemini's free tier, Google may use submitted content to improve its products. In the EEA, Switzerland and the UK, a paid key is recommended.</li>
+<li>Digital content is generally non-refundable once downloaded. If your PC meets the requirements and it still doesn't work, or where the law requires it, please contact us.</li>
+</ul></div>
+<p class="muted">Prices are fixed per store, set to match each platform's specifications, exchange rates and local tax rules. We cannot accept individual discount or currency-change requests.</p></div>
+<h2>자주 묻는 질문</h2>
+<div class="box">
+<details><summary>코딩을 알아야 하나요?</summary><p>아니요. 첫 로그인과 일회성 보안 경고에서 몇 번 클릭이 필요하며, 안내서가 단계별로 알려 줍니다.</p></details>
+<details><summary>Claude 구독이 포함되어 있나요?</summary><p>아니요. 유료 Claude 요금제(Pro/Max) 또는 Anthropic API 계정이 별도로 필요합니다.</p></details>
+<details><summary>Mac과 Windows 모두 되나요?</summary><p>네, 둘 다 됩니다.</p></details>
+</div>
+</section>
+<section class="lg es" lang="es" dir="ltr">
+<h1>Convierte Claude Code en tu propio asistente de IA</h1>
+<p>PushStart AI es un paquete inicial para Claude Code. Añade capturas de pantalla y vídeos de tu trabajo diario y creará comandos y un panel a la medida de tu rutina. Sin programar y sin manuales largos.</p>
+<p><b>De instalar Claude Code a una configuración hecha a tu medida: un doble clic y unos pocos pasos. (Se necesita aparte un plan de pago de Claude.)</b></p>
+<video controls playsinline preload="metadata" poster="og.png" src="promo_en.mp4"></video>
+<p class="muted">El vídeo está en inglés.</p>
+<div class="buy">
+<a href="https://pushstartlab.gumroad.com/l/pushstart-ai">Comprar en Gumroad<small>$39</small></a>
+<a href="https://pushstart-lab.booth.pm/items/8997091">BOOTH (tienda de Japón)<small>JPY 4,980 impuestos incluidos</small></a>
+<a href="https://note.com/pushstartlab/n/nbcc305fa2bcf">note (tienda de Japón)<small>JPY 4,980 impuestos incluidos</small></a>
+</div>
+<p class="muted">* Se necesita aparte un plan de pago de Claude (Pro/Max) o una cuenta de la API de Anthropic. Lee las notas de abajo antes de comprar.</p>
+<h2>Tres pasos</h2>
+<ol class="steps"><li>Haz doble clic en el archivo de instalación (Windows / Mac)</li><li>Pon capturas de pantalla (y vídeos) de tu trabajo diario en la carpeta que se abre</li><li>Ponle nombre a tu asistente. Leerá tu rutina y creará tus comandos y tu panel</li></ol>
+<h2>Qué incluye</h2>
+<ul><li>Instalación con un clic para Windows y Mac (instala Claude Code y las herramientas necesarias con los instaladores oficiales)</li><li>Comandos básicos desde el primer día (como /morning, el resumen matutino), más tareas propias creadas a partir de tu rutina real</li><li>Un panel personal</li><li>Los vídeos y archivos grandes van a Google Gemini (con nivel gratuito) para ahorrar uso de Claude</li><li>Elige el modo Ahorro, Estándar o Potencia</li><li>Texto de autoayuda: pégalo en Claude y te guía paso a paso ante cualquier problema</li></ul>
+<img src="dashboard.png" alt="Dashboard" loading="lazy">
+<h2>¿Qué cambia al añadir PushStart AI?</h2>
+<ul><li><b>La instalación es un doble clic:</b> instala por ti Claude Code y las herramientas que necesita.</li><li><b>Comandos listos desde el primer día:</b> /morning, /analyze, /research y más; recuerdan tu nombre y tu rutina.</li><li><b>Ponle nombre a tu asistente:</b> aprende cómo trabajas y te habla en consecuencia.</li><li><b>Niveles de razonamiento intercambiables para ahorrar uso:</b> barato para preguntas simples, más potente para las difíciles.</li></ul>
+<p class="muted">* Solo ejemplos. Las tareas creadas a partir de tus capturas y vídeos dependen de lo que muestren tus pantallas; los resultados varían.</p>
+<h2>Para quién es</h2>
+<div class="box"><p>Para quien no se siente cómodo con archivos de configuración ni comandos y quiere empezar con un doble clic. No es para ti si prefieres montarlo todo por tu cuenta.</p></div>
+<h2>Léelo antes de comprar</h2>
+<p class="muted">Las condiciones completas (reembolsos, países compatibles, precios) están abajo en inglés y son el texto vinculante. Esta traducción es solo orientativa.</p>
+<div lang="en" dir="ltr"><h2>Please read before buying</h2>
+<div class="box"><ul>
+<li><b>A paid Claude plan (Pro or Max) or an Anthropic API account is required.</b> It is not included. (Guide: Pro is $20/month, or $17/month billed annually, before tax, as listed on Anthropic's site in October 2026. Prices may change; please check Anthropic's official page.) To upgrade: log in at claude.ai, open https://claude.ai/upgrade and choose Pro (on mobile, prices are shown in your app store).</li>
+<li>Claude is available only in Anthropic's <a href="https://www.anthropic.com/supported-countries">supported countries and regions</a>, for users 18+.</li>
+<li>Windows 10/11 or macOS, and an internet connection.</li>
+<li>First run needs a Claude login. On Mac, the official Node.js installer may open.</li>
+<li>Scripts are not code-signed, so Windows/Mac show a one-time security warning.</li>
+<li>On Gemini's free tier, Google may use submitted content to improve its products. In the EEA, Switzerland and the UK, a paid key is recommended.</li>
+<li>Digital content is generally non-refundable once downloaded. If your PC meets the requirements and it still doesn't work, or where the law requires it, please contact us.</li>
+</ul></div>
+<p class="muted">Prices are fixed per store, set to match each platform's specifications, exchange rates and local tax rules. We cannot accept individual discount or currency-change requests.</p></div>
+<h2>Preguntas frecuentes</h2>
+<div class="box">
+<details><summary>¿Necesito saber programar?</summary><p>No. Hacen falta unos clics en el primer inicio de sesión y en la advertencia de seguridad (una sola vez); la guía muestra cada paso.</p></details>
+<details><summary>¿Incluye la suscripción a Claude?</summary><p>No. Se necesita aparte un plan de pago de Claude (Pro/Max) o una cuenta de la API de Anthropic.</p></details>
+<details><summary>¿Funciona en Mac y Windows?</summary><p>Sí, en ambos.</p></details>
+</div>
+</section>
+<!--/I18N-->
 <footer class="muted">
 <p><a href="https://docs.google.com/document/d/e/2PACX-1vQ5IdI8cp2eGU3S6pz9fgrR81Bjvbz227gNQYnXw8Wc9gZ-9R3-1bM49g_RQjiFIy--ya9Y8MMTeWiu/pub">利用規約・特定商取引法に基づく表記 / Terms</a> ・ <a href="https://forms.gle/TT59KYtQX6VF33DQ9">お問い合わせ / Contact</a></p>
 <p>PushStart Lab（ひと押しラボ）<br>Claude and Claude Code are trademarks of Anthropic; Gemini is a trademark of Google. This product is not affiliated with or endorsed by Anthropic or Google. / Claude・Claude Code は Anthropic 社、Gemini は Google 社の商標です。本商品は両社とは無関係で、公認を受けたものではありません。</p>
@@ -248,12 +469,13 @@ footer{margin-top:3em}
 </main>
 <script>
 (function(){
-  var h=document.documentElement, k='ps-lang', l=null;
+  var h=document.documentElement, k='ps-lang', l=null, ok=["ja","en","ar","zh-TW","zh-CN","ko","es"];
   try{ l=new URLSearchParams(location.search).get('lang')||localStorage.getItem(k); }catch(e){}
-  if(l!=='ja'&&l!=='en') l=(navigator.language||'ja').toLowerCase().indexOf('ja')===0?'ja':'en';
-  function set(v){ h.setAttribute('data-lang',v); h.lang=v; try{localStorage.setItem(k,v);}catch(e){} }
+  if(ok.indexOf(l)<0){ var n=(navigator.language||'en').toLowerCase(); l=n.indexOf('ja')===0?'ja':n.indexOf('ar')===0?'ar':n.indexOf('ko')===0?'ko':n.indexOf('es')===0?'es':(n==='zh-tw'||n==='zh-hk'||n==='zh-hant')?'zh-TW':n.indexOf('zh')===0?'zh-CN':'en'; }
+  var sel=document.getElementById('lang-sel');
+  function set(v){ h.setAttribute('data-lang',v); h.lang=v; h.dir=(v==='ar')?'rtl':'ltr'; sel.value=v; try{localStorage.setItem(k,v);}catch(e){} }
   set(l);
-  document.getElementById('lang-btn').addEventListener('click',function(){ set(h.getAttribute('data-lang')==='ja'?'en':'ja'); });
+  sel.addEventListener('change',function(){ set(sel.value); });
 })();
 </script>
 </body>
