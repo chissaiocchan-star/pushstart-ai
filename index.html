@@ -15,8 +15,8 @@
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"映画に出てくるような自分専用のAIアシスタントを、初心者が簡単に作る方法はありますか？","acceptedAnswer":{"@type":"Answer","text":"スターターパック「PushStart AI」は、セットアップファイルをダブルクリックし、普段の画面のスクショや動画を入れたフォルダを用意するだけで、Claude Code 上にあなた専用のAIエージェント（自分専用の作業とダッシュボード）を作ります。Windows / Mac 対応。Claude の有料プランまたは API 契約が別途必要です。"}},
 {"@type":"Question","name":"How can a beginner set up a personal AI agent without coding?","acceptedAnswer":{"@type":"Answer","text":"PushStart AI is a starter pack for Claude Code. Double-click the setup file, drop screenshots or videos of your daily work into a folder, and name your agent. It builds custom commands and a dashboard for your routine. Windows and Mac. A paid Claude plan (Pro/Max) or an Anthropic API account is required separately."}},
-{"@type":"Question","name":"GitHubの無料テンプレートや、Claude Code の /agents コマンドで自作するのと何が違いますか？","acceptedAnswer":{"@type":"Answer","text":"無料のテンプレートや /agents でも、自分専用のエージェントは作れます。このパックは、設定ファイルやコマンド操作に慣れていない方向けに、ダブルクリックで始め、普段の画面のスクショを渡すと日課に合わせた自分専用の作業とダッシュボードまで作る流れにまとめたものです。自分で調べて組み立てるのが苦にならない方は、無料のものでも十分です。"}},
-{"@type":"Question","name":"How is this different from free GitHub templates or building an agent with Claude Code's /agents command?","acceptedAnswer":{"@type":"Answer","text":"Free templates and /agents can also build a personal agent. This pack is for people who are not used to config files or commands: you double-click to start, give it screenshots of your daily work, and it builds custom commands and a dashboard for your routine. If you are comfortable assembling things yourself, the free options work fine."}}
+{"@type":"Question","name":"無料で配られている自作用の雛形（テンプレート）や、Claude Code にもともとある機能で自作するのと何が違いますか？","acceptedAnswer":{"@type":"Answer","text":"無料の雛形や Claude Code にもともとある機能でも、自分専用のエージェントは作れます。このパックは、パソコンの細かい設定や文字を打ち込む操作に慣れていない方向けに、ダブルクリックで始め、普段の画面のスクショを渡すと日課に合わせた自分専用の作業とダッシュボードまで作る流れにまとめたものです。自分で調べて組み立てるのが苦にならない方は、無料のものでも十分です。"}},
+{"@type":"Question","name":"How is this different from free templates found online or building an agent with Claude Code's built-in features?","acceptedAnswer":{"@type":"Answer","text":"Free templates and Claude Code's built-in features can also build a personal agent. This pack is for people who are not used to settings or typing technical commands: you double-click to start, give it screenshots of your daily work, and it builds custom commands and a dashboard for your routine. If you are comfortable assembling things yourself, the free options work fine."}}
 ]}
 </script>
 <style>
@@ -85,12 +85,12 @@ footer{margin-top:3em}
 <li>開いたフォルダに、普段の仕事の画面のスクショ（と動画）を入れます</li>
 <li>AIに名前を付けます。あなたの日課を読み取って、自分専用の作業とダッシュボードを作ります</li>
 </ol>
-<p class="muted">セットアップ中とAIとの会話には、文字だけのウィンドウを使います。専門的なコマンドを打つ必要はありません。</p>
+<p class="muted">セットアップ中とAIとの会話には、文字だけのウィンドウを使います。難しい操作は必要ありません。</p>
 
 <h2>できること</h2>
 <ul>
 <li>Windows / Mac のワンクリックセットアップ（公式インストーラーで Claude Code と必要なツールを導入）</li>
-<li>基本のコマンド（<code>/morning</code> で朝のまとめ など）と、あなたの作業に合わせた自分専用の作業</li>
+<li>最初から使える基本の機能（<code>/morning</code> で朝のまとめ など）と、あなたの作業に合わせた自分専用の作業</li>
 <li>自分専用のダッシュボード</li>
 <li>動画・大きなファイルは Google Gemini に回して Claude の使用量を節約（無料枠あり）</li>
 <li>節約・標準・パワーの3つのモードから選べます</li>
@@ -102,8 +102,8 @@ footer{margin-top:3em}
 <h2>PushStart AI を入れると、何が変わる？</h2>
 <p>Claude Code は、公式の手順で自分で入れて使えます。PushStart AI は、そのあとの「あなた用に整える」作業を、まとめて済ませるものです。</p>
 <ul>
-<li><b>準備がダブルクリックで済む：</b>Claude Code と必要なツールを自動で入れます。（自分で入れる場合は、コマンドを打つ手順があります）</li>
-<li><b>使えるコマンドが最初から入っている：</b>朝のまとめ（/morning）、新しいファイルの解析（/analyze）、調べ物（/research）などの基本のコマンドを、最初から用意しています。あなたの名前や日課を覚えて答えるので、毎回同じ説明を打たなくて済みます。さらに、よく使う作業は「/task 名前」の自分専用コマンドとして増やせます。</li>
+<li><b>準備がダブルクリックで済む：</b>Claude Code と必要なツールを自動で入れます。（自分で入れる場合は、文字を打ち込む手順があります）</li>
+<li><b>使える機能が最初から入っている：</b>朝のまとめ（/morning）、新しいファイルの解析（/analyze）、調べ物（/research）などの基本の機能を、最初から用意しています。あなたの名前や日課を覚えて答えるので、毎回同じ説明を打たなくて済みます。さらに、よく使う作業は「/task 名前」の自分専用の呼び出しとして増やせます。</li>
 <li><b>AIの名前・性格・話し方を決められる：</b>名前を付けて、性格と話し方（落ち着いた執事風、気さくな相棒風、ドラマの相棒風など。自分の言葉で決めることもできます）を選ぶと、あなたの仕事のやり方を学んで、その話し方で話してくれます。自分で用意した画像を、ダッシュボードの顔にもできます。（既存のキャラクターや、実在の人物の声・話し方に似せる機能ではありません）</li>
 <li><b>節約して使える切り替え機能つき：</b>AIの「考える力」を、節約・ふつう・パワーの3段階で切り替えられます。簡単な質問は安く、難しい相談は賢く。動画や大きなファイルは Google Gemini（無料枠あり）に任せて、使う分を減らします。</li>
 <li><b>困ったときにすぐ聞ける：</b>Claude に貼りつけるだけで、一歩ずつ教えてくれる「ヘルプ用の文章」が付いています。</li>
@@ -122,10 +122,10 @@ footer{margin-top:3em}
 
 <h2>こんな方に向いています</h2>
 <div class="box"><ul>
-<li>設定ファイルやコマンド操作が苦手で、ダブルクリックから始めたい方</li>
-<li>普段の仕事の画面を見せて、自分用のコマンドとダッシュボードを作ってほしい方</li>
+<li>パソコンの細かい設定や、文字を打ち込む操作が苦手で、ダブルクリックから始めたい方</li>
+<li>普段の仕事の画面を見せて、自分用の作業とダッシュボードを作ってほしい方</li>
 </ul>
-<p><b>向かない方：</b>自分で調べて組み立てるのが苦にならない方は、無料のテンプレートや Claude Code の /agents でも十分です。Claude の有料プラン（または API 契約）をお持ちでない方も、先にそちらが必要です。</p></div>
+<p><b>向かない方：</b>自分で調べて組み立てるのが苦にならない方は、無料の雛形や Claude Code にもともとある機能でも十分です。Claude の有料プラン（または API 契約）をお持ちでない方も、先にそちらが必要です。</p></div>
 
 <h2>購入先（ストアごとに価格を設定しています）</h2>
 <div class="buy">
@@ -140,7 +140,7 @@ footer{margin-top:3em}
 <li><b>Claude の有料プラン（Pro または Max）、または Anthropic API の契約が別途必要です。</b>本商品には含まれません。（目安：Pro は月額20ドル（約3,100円）、年払いなら月17ドル（約2,700円）相当。税別、1ドル=157円で計算した目安（2026年10月22日時点）で、ドル額は2026年10月時点の公式表示です。為替や支払い方法で変わるため、最新は Anthropic の公式ページでご確認ください）切り替え方：claude.ai にログインし、https://claude.ai/upgrade を開いて Pro を選びます（スマホアプリは各アプリストアで価格を確認できます）。</li>
 <li>Claude は Anthropic 社が対応する国・地域で、18歳以上の方のみ利用できます（<a href="https://www.anthropic.com/supported-countries">対応国</a>）。</li>
 <li>Windows 10/11 または macOS、インターネット接続が必要です。</li>
-<li>初回は Claude へのログインが必要です。Mac では公式の Node.js インストーラーが開く場合があります。</li>
+<li>初回は Claude へのログインが必要です。Mac では公式の補助ソフトの導入画面が開く場合があります。</li>
 <li>コード署名をしていないため、初回に Windows / Mac のセキュリティ警告が出ます。案内に沿って進めてください。</li>
 <li>Gemini の無料枠では、送った内容が Google の製品改善に使われる場合があります。EEA・スイス・英国では有料キーをおすすめします。</li>
 <li>ダウンロード商品のため、返品・キャンセルは原則お受けできません。記載の動作環境を満たしているのに動作せず解決できない場合や、法令で求められる場合はご相談ください。</li>
@@ -150,7 +150,7 @@ footer{margin-top:3em}
 <div class="box">
 <details><summary>プログラミングの経験がなくても使えますか？</summary><p>コードを書く必要はありません。ただ、初回のログインやセキュリティ警告の操作など、数回のクリックは必要です。手順は同梱のガイドにあります。</p></details>
 <details><summary>映画のような自分専用のAIアシスタントを作る簡単な方法はありますか？</summary><p>このパックは、そのための入口として作りました。ダブルクリックでセットアップし、普段の画面のスクショを渡すと、あなたの日課に合わせた自分専用の作業とダッシュボードを作ります。</p></details>
-<details><summary>GitHubの無料テンプレートや、Claude Code の /agents コマンドで自作するのと何が違いますか？</summary><p>無料のテンプレートや /agents でも、自分専用のエージェントは作れます。このパックは、設定ファイルやコマンド操作に慣れていない方向けに、ダブルクリックで始め、普段の画面のスクショを渡すと日課に合わせた自分専用の作業とダッシュボードまで作る流れにまとめたものです。自分で調べて組み立てるのが苦にならない方は、無料のものでも十分です。</p></details>
+<details><summary>無料で配られている自作用の雛形（テンプレート）や、Claude Code にもともとある機能で自作するのと何が違いますか？</summary><p>無料の雛形や Claude Code にもともとある機能でも、自分専用のエージェントは作れます。このパックは、パソコンの細かい設定や文字を打ち込む操作に慣れていない方向けに、ダブルクリックで始め、普段の画面のスクショを渡すと日課に合わせた自分専用の作業とダッシュボードまで作る流れにまとめたものです。自分で調べて組み立てるのが苦にならない方は、無料のものでも十分です。</p></details>
 <details><summary>Claude の契約は含まれていますか？</summary><p>含まれていません。Claude の有料プラン（Pro 等）または API の契約が別途必要です。</p></details>
 <details><summary>Mac でも Windows でも使えますか？</summary><p>どちらにも対応しています。</p></details>
 <details><summary>困ったときは？</summary><p>同梱のヘルプ用の文章を Claude に貼り付けてご相談ください。解決しない場合は、下の問い合わせフォームからご連絡ください。</p></details>
@@ -218,7 +218,7 @@ footer{margin-top:3em}
 <li>You are not comfortable with config files or commands and want to start with a double-click</li>
 <li>You want to show screenshots of your daily work and get your own commands and dashboard built</li>
 </ul>
-<p><b>Not for you if:</b> you are happy to research and assemble things yourself. Free templates or Claude Code's /agents work fine for that. You also need a paid Claude plan (or API account) first.</p></div>
+<p><b>Not for you if:</b> you are happy to research and assemble things yourself. Free templates or Claude Code's built-in features work fine for that. You also need a paid Claude plan (or API account) first.</p></div>
 
 <h2>Where to buy (prices are set per store)</h2>
 <div class="buy">
@@ -233,7 +233,7 @@ footer{margin-top:3em}
 <li><b>A paid Claude plan (Pro or Max) or an Anthropic API account is required.</b> It is not included. (Guide: Pro is $20/month, or $17/month billed annually, before tax, as listed on Anthropic's site in October 2026. Prices may change; please check Anthropic's official page.) To upgrade: log in at claude.ai, open https://claude.ai/upgrade and choose Pro (on mobile, prices are shown in your app store).</li>
 <li>Claude is available only in Anthropic's <a href="https://www.anthropic.com/supported-countries">supported countries and regions</a>, for users 18+.</li>
 <li>Windows 10/11 or macOS, and an internet connection.</li>
-<li>First run needs a Claude login. On Mac, the official Node.js installer may open.</li>
+<li>First run needs a Claude login. On Mac, the official helper-software installer may open.</li>
 <li>Scripts are not code-signed, so Windows/Mac show a one-time security warning.</li>
 <li>On Gemini's free tier, Google may use submitted content to improve its products. In the EEA, Switzerland and the UK, a paid key is recommended.</li>
 <li>Digital content is generally non-refundable once downloaded. If your PC meets the requirements and it still doesn't work, or where the law requires it, please contact us.</li>
@@ -243,7 +243,7 @@ footer{margin-top:3em}
 <div class="box">
 <details><summary>Do I need to know how to code?</summary><p>No coding is needed. A few clicks are still required for the first login and the one-time security warning; the guide shows each step.</p></details>
 <details><summary>How can a beginner set up a personal AI agent?</summary><p>Double-click the setup file, drop screenshots of your daily work into a folder, and name your agent. It builds custom commands and a dashboard for your routine.</p></details>
-<details><summary>How is this different from free GitHub templates or building an agent with Claude Code's /agents command?</summary><p>Free templates and /agents can also build a personal agent. This pack is for people who are not used to config files or commands: you double-click to start, give it screenshots of your daily work, and it builds custom commands and a dashboard for your routine. If you are comfortable assembling things yourself, the free options work fine.</p></details>
+<details><summary>How is this different from free templates found online or building an agent with Claude Code's built-in features?</summary><p>Free templates and Claude Code's built-in features can also build a personal agent. This pack is for people who are not used to settings or typing technical commands: you double-click to start, give it screenshots of your daily work, and it builds custom commands and a dashboard for your routine. If you are comfortable assembling things yourself, the free options work fine.</p></details>
 <details><summary>Is a Claude subscription included?</summary><p>No. A paid Claude plan (Pro/Max) or an Anthropic API account is required separately.</p></details>
 <details><summary>Does it work on Mac and Windows?</summary><p>Yes, both.</p></details>
 <details><summary>What if I get stuck?</summary><p>Paste the included support prompt into Claude and it will walk you through it. If that doesn't solve it, use the contact form below.</p></details>
@@ -280,7 +280,7 @@ footer{margin-top:3em}
 <li><b>A paid Claude plan (Pro or Max) or an Anthropic API account is required.</b> It is not included. (Guide: Pro is $20/month, or $17/month billed annually, before tax, as listed on Anthropic's site in October 2026. Prices may change; please check Anthropic's official page.) To upgrade: log in at claude.ai, open https://claude.ai/upgrade and choose Pro (on mobile, prices are shown in your app store).</li>
 <li>Claude is available only in Anthropic's <a href="https://www.anthropic.com/supported-countries">supported countries and regions</a>, for users 18+.</li>
 <li>Windows 10/11 or macOS, and an internet connection.</li>
-<li>First run needs a Claude login. On Mac, the official Node.js installer may open.</li>
+<li>First run needs a Claude login. On Mac, the official helper-software installer may open.</li>
 <li>Scripts are not code-signed, so Windows/Mac show a one-time security warning.</li>
 <li>On Gemini's free tier, Google may use submitted content to improve its products. In the EEA, Switzerland and the UK, a paid key is recommended.</li>
 <li>Digital content is generally non-refundable once downloaded. If your PC meets the requirements and it still doesn't work, or where the law requires it, please contact us.</li>
@@ -322,7 +322,7 @@ footer{margin-top:3em}
 <li><b>A paid Claude plan (Pro or Max) or an Anthropic API account is required.</b> It is not included. (Guide: Pro is $20/month, or $17/month billed annually, before tax, as listed on Anthropic's site in October 2026. Prices may change; please check Anthropic's official page.) To upgrade: log in at claude.ai, open https://claude.ai/upgrade and choose Pro (on mobile, prices are shown in your app store).</li>
 <li>Claude is available only in Anthropic's <a href="https://www.anthropic.com/supported-countries">supported countries and regions</a>, for users 18+.</li>
 <li>Windows 10/11 or macOS, and an internet connection.</li>
-<li>First run needs a Claude login. On Mac, the official Node.js installer may open.</li>
+<li>First run needs a Claude login. On Mac, the official helper-software installer may open.</li>
 <li>Scripts are not code-signed, so Windows/Mac show a one-time security warning.</li>
 <li>On Gemini's free tier, Google may use submitted content to improve its products. In the EEA, Switzerland and the UK, a paid key is recommended.</li>
 <li>Digital content is generally non-refundable once downloaded. If your PC meets the requirements and it still doesn't work, or where the law requires it, please contact us.</li>
@@ -364,7 +364,7 @@ footer{margin-top:3em}
 <li><b>A paid Claude plan (Pro or Max) or an Anthropic API account is required.</b> It is not included. (Guide: Pro is $20/month, or $17/month billed annually, before tax, as listed on Anthropic's site in October 2026. Prices may change; please check Anthropic's official page.) To upgrade: log in at claude.ai, open https://claude.ai/upgrade and choose Pro (on mobile, prices are shown in your app store).</li>
 <li>Claude is available only in Anthropic's <a href="https://www.anthropic.com/supported-countries">supported countries and regions</a>, for users 18+.</li>
 <li>Windows 10/11 or macOS, and an internet connection.</li>
-<li>First run needs a Claude login. On Mac, the official Node.js installer may open.</li>
+<li>First run needs a Claude login. On Mac, the official helper-software installer may open.</li>
 <li>Scripts are not code-signed, so Windows/Mac show a one-time security warning.</li>
 <li>On Gemini's free tier, Google may use submitted content to improve its products. In the EEA, Switzerland and the UK, a paid key is recommended.</li>
 <li>Digital content is generally non-refundable once downloaded. If your PC meets the requirements and it still doesn't work, or where the law requires it, please contact us.</li>
@@ -406,7 +406,7 @@ footer{margin-top:3em}
 <li><b>A paid Claude plan (Pro or Max) or an Anthropic API account is required.</b> It is not included. (Guide: Pro is $20/month, or $17/month billed annually, before tax, as listed on Anthropic's site in October 2026. Prices may change; please check Anthropic's official page.) To upgrade: log in at claude.ai, open https://claude.ai/upgrade and choose Pro (on mobile, prices are shown in your app store).</li>
 <li>Claude is available only in Anthropic's <a href="https://www.anthropic.com/supported-countries">supported countries and regions</a>, for users 18+.</li>
 <li>Windows 10/11 or macOS, and an internet connection.</li>
-<li>First run needs a Claude login. On Mac, the official Node.js installer may open.</li>
+<li>First run needs a Claude login. On Mac, the official helper-software installer may open.</li>
 <li>Scripts are not code-signed, so Windows/Mac show a one-time security warning.</li>
 <li>On Gemini's free tier, Google may use submitted content to improve its products. In the EEA, Switzerland and the UK, a paid key is recommended.</li>
 <li>Digital content is generally non-refundable once downloaded. If your PC meets the requirements and it still doesn't work, or where the law requires it, please contact us.</li>
@@ -448,7 +448,7 @@ footer{margin-top:3em}
 <li><b>A paid Claude plan (Pro or Max) or an Anthropic API account is required.</b> It is not included. (Guide: Pro is $20/month, or $17/month billed annually, before tax, as listed on Anthropic's site in October 2026. Prices may change; please check Anthropic's official page.) To upgrade: log in at claude.ai, open https://claude.ai/upgrade and choose Pro (on mobile, prices are shown in your app store).</li>
 <li>Claude is available only in Anthropic's <a href="https://www.anthropic.com/supported-countries">supported countries and regions</a>, for users 18+.</li>
 <li>Windows 10/11 or macOS, and an internet connection.</li>
-<li>First run needs a Claude login. On Mac, the official Node.js installer may open.</li>
+<li>First run needs a Claude login. On Mac, the official helper-software installer may open.</li>
 <li>Scripts are not code-signed, so Windows/Mac show a one-time security warning.</li>
 <li>On Gemini's free tier, Google may use submitted content to improve its products. In the EEA, Switzerland and the UK, a paid key is recommended.</li>
 <li>Digital content is generally non-refundable once downloaded. If your PC meets the requirements and it still doesn't work, or where the law requires it, please contact us.</li>
